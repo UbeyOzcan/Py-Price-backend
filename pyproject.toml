@@ -1,0 +1,21 @@
+[project]
+name = "py-price"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "UbeyOzcan", email = "ozcanubey@outlook.com" }
+]
+requires-python = ">=3.15"
+dependencies = [
+    "adbc-driver-postgresql>=1.13.0",
+    "adbc-driver-sqlite>=1.13.0",
+    "polars>=2.1.0",
+]
+
+[project.scripts]
+py-price = "py_price:main"
+
+[build-system]
+requires = ["uv_build>=0.13.6,<0.14.0"]
+build-backend = "uv_build"
