@@ -10,6 +10,7 @@ requires-python = ">=3.15"
 dependencies = [
     "adbc-driver-postgresql>=1.13.0",
     "adbc-driver-sqlite>=1.13.0",
+    "dotenv>=0.9.9",
     "polars>=2.1.0",
 ]
 
