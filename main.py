@@ -14,4 +14,3 @@ for i in model.keys():
     E = EDA(data = data, res = model[i]['res'], w = model[i]['w'])
     result = E.response()
     print(result)
-    print('done')
