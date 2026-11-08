@@ -2,15 +2,16 @@ from db.reader import get_data
 from db.analytic import EDA
 
 data = get_data()
+print(data)
 
 model = {"Frequency" :
-             {'res' : 'ClaimNb',
-              'w' : 'Exposure'},
+             {'y' : 'ClaimNb',
+              'offset' : 'Exposure'},
         "Severity" :
-            {'res' : 'ClaimAmount',
-              'w' : 'ClaimNb'}}
+            {'y' : 'ClaimAmount',
+              'offset' : 'ClaimNb'}}
 
 for i in model.keys():
-    E = EDA(data = data, res = model[i]['res'], w = model[i]['w'])
+    E = EDA(data = data, y = model[i]['y'], offset = model[i]['offset'])
     result = E.response()
     print(result)
