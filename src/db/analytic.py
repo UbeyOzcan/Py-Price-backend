@@ -15,7 +15,12 @@ class EDA:
         return result.item()
 
 
-    def univariate(self, var:[str]) -> pl.DataFrame:
+    def univariate(self, var:[str]) -> dict:
+
+        uni_dict = {}
+
         for i in var:
-            print(i)
-        return None
+            uni_dict[i] = self.data.group_by(i).agg(pl.col(self.offset).sum(),
+                                                    pl.col(self.y).sum())
+
+        return uni_dict
