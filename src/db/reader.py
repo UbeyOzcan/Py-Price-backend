@@ -1,7 +1,9 @@
 import polars as pl
 from dotenv import load_dotenv
 import os
+import polars_redis as redis
 
+@redis.cache(url="redis://localhost:6379", ttl=3600)
 def get_data() -> pl.DataFrame :
 
     load_dotenv()
