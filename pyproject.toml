@@ -13,6 +13,7 @@ dependencies = [
     "dotenv>=0.9.9",
     "polars>=2.1.0",
     "polars-redis>=0.1.6",
+    "statsmodels>=0.15.0",
 ]
 
 [project.scripts]
